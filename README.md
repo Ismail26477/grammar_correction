@@ -31,3 +31,5 @@ A complete list of dependencies with specific versions can be found in the `requ
    ```bash
    git clone <repository-url>
    cd <repository-folder>
+
+https://www.oracle.com/java/technologies/javase-downloads.html

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correction Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body> 
+    <div class="container">
+        <h1>Text Correction Tool</h1>
+        <textarea id="text-input" placeholder="Enter text here..."></textarea>
+        <button id="correct-button">Correct</button>
+        <div id="loader" class="loader" style="display: none;"></div>
+        <div class="output-section blur">
+
+            <h3>Corrected Text</h3>
+            <pre id="corrected-text"></pre>
+            <br>
+            <h3>Corrections</h3>
+            <div class="tabs">
+                <div class="tab active" data-tab="all">All Errors (<span id="all-count">0</span>)</div>
+                <div class="tab" data-tab="capitalization">Capitalization Errors (<span id="capitalization-count">0</span>)</div>
+                <div class="tab" data-tab="grammar">Grammar Errors (<span id="grammar-count">0</span>)</div>
+                <div class="tab" data-tab="spelling">Spelling Errors (<span id="spelling-count">0</span>)</div>
+                <div class="tab" data-tab="punctuation">Punctuation Errors (<span id="punctuation-count">0</span>)</div>
+            </div>
+            <ul id="corrections-list" class="error-list"></ul>
+            
+        </div>         
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

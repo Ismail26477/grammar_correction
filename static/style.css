@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    padding: 20px;
+} 
+.container {
+    max-width: 600px; 
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+textarea {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
+}
+.tabs {
+    display: flex;
+    margin-top: 20px;
+}
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #ddd;
+    margin: 0 2px;
+    border-radius: 8px;
+}
+.tab.active {
+    background-color: #4CAF50;
+    color: white;
+}
+.tab-content {
+    margin-top: 20px;
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}
+.error-list {
+    list-style-type: none;
+    padding: 0;
+}
+.error-list li {
+    margin: 5px 0;
+}
+.output-section {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+.output-section h3 {
+    margin-top: 0;
+}
+pre {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.error-word {
+    color: red;
+    text-decoration: line-through;
+    font-weight: bold;
+}
+
+.corrected-word {
+    color: green;
+    font-weight: bold;
+}
+.inserted-word {
+    background-color: #ffff99;  
+    color: #008000;  
+    font-weight: bold;
+    padding: 0 4px;
+    border-radius: 4px;
+}
+.loading {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.loading img {
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.blur {
+    filter: blur(5px);
+    pointer-events: none; 
+    opacity: 0.5; 
+    transition: all 0.3s ease;
+}
+
+.blur-none {
+    filter: none;
+    pointer-events: auto;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+
+.inserted-word {
+    background-color: #ffff99; 
+    color: #008000;        
+    font-weight: bold;
+    padding: 0 4px;
+    border-radius: 4px;
+}
+
